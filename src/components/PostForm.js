@@ -8,7 +8,7 @@ class PostForm extends Component {
         super(props);
         this.state = {
             title: '',
-            content: ''
+            body: ''
         };
         this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
@@ -23,8 +23,9 @@ class PostForm extends Component {
 
         const post = {
             title: this.state.title,
-            content: this.state.content
+            body: this.state.body
         };
+
         this.props.createPost(post);
     }
 
@@ -40,7 +41,7 @@ class PostForm extends Component {
                     <br/>
                     <div>
                         <label>Content: </label><br/>
-                        <textarea name='content' onChange={this.onChange} value={this.state.content}/>
+                        <textarea name='body' onChange={this.onChange} value={this.state.body}/>
                     </div>
                     <br/>
                     <button type='submit'>
@@ -55,6 +56,5 @@ class PostForm extends Component {
 PostForm.propTypes = {
     createPost: PropTypes.func.isRequired
 };
-
 
 export default connect(null, {createPost})(PostForm);
