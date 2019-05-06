@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
 
-function FirstComponent({title = "Title", content = "Content"}) {
+function AppHeader({title = "Title", content = "Content"}) {
     return (
         <div>
             <dialog open>
@@ -12,4 +12,4 @@ function FirstComponent({title = "Title", content = "Content"}) {
     )
 }
 
-export default FirstComponent;
+export default AppHeader;

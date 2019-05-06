@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
-import FirstComponent from "./components/FirstComponent";
 
 function App() {
     return (
         <div>
-            <FirstComponent/>
+            <header>
+
+            </header>
+
         </div>
     );
 }
