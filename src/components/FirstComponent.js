@@ -1,12 +1,15 @@
 import React from 'react';
 import '../App.css';
 
-function FirstComponent() {
+function FirstComponent({title = "Title", content = "Content"}) {
     return (
         <div>
-            <h1>Hello again</h1>
+            <dialog open>
+                <h1>{title}</h1>
+                <p>{content}</p>
+            </dialog>
         </div>
-    );
+    )
 }
 
 export default FirstComponent;
