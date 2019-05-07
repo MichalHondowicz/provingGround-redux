@@ -1,13 +1,13 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-
-function Avatar({login = ""}) {
-
-    const imgUrl = `https://api.adorable.io/avatars/55/${login}.png`;
-
-    return (
-        <img src={imgUrl} className="ui mini rounded image"/>
-    )
+class Avatar extends Component {
+    render() {
+        const {login = ""} = this.props;
+        const imgUrl = `https://api.adorable.io/avatars/55/${login}.png`;
+        return (
+            <img src={imgUrl} className="ui mini rounded image"/>
+        )
+    }
 }
 
 export default Avatar;
