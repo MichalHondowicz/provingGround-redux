@@ -10,15 +10,13 @@ class PostForm extends Component {
             title: '',
             body: ''
         };
-        this.onChange = this.onChange.bind(this);
-        this.onSubmit = this.onSubmit.bind(this);
     }
 
-    onChange(e) {
+    onChange = (e) => {
         this.setState({[e.target.name]: e.target.value});
     }
 
-    onSubmit(e) {
+    onSubmit = (e) => {
         e.preventDefault();
 
         const post = {
